@@ -10,6 +10,7 @@ const NavBar = () => {
         <Nav className="ms-auto">
           <NavLink to='/pages/home' className="nav-link">Home</NavLink>
           <NavLink to='/pages/about' className="nav-link">About</NavLink>
+          <NavLink to='/pages/page-edit' className="nav-link">Admin</NavLink>
         </Nav>
       </Container>
     </Navbar>

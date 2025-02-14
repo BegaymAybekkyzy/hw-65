@@ -1,9 +1,9 @@
-import MainPageBlock from '../../components/MainPageBlock/MainPageBlock.tsx';
+import Page from '../../components/Page/Page.tsx';
 
 const Home = () => {
   return (
     <div>
-      <MainPageBlock/>
+      <Page/>
     </div>
   );
 };

@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useState } from 'react';
 import axiosApi from '../../../axiosApi.ts';
 import { IPage } from '../../../types';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import * as React from 'react';
 
-const MainPageBlock = () => {
+const Page = () => {
   const [pageContent, setPageContent] = useState<IPage>();
   const {pageName} = useParams();
+  const location = useLocation();
+  const page = location.pathname
 
   const fetchData = useCallback(async () => {
     try {
@@ -17,7 +19,7 @@ const MainPageBlock = () => {
     } catch (e) {
       alert(e)
     }
-  }, [pageName])
+  }, [pageName, page]);
 
   useEffect(() => {
     void fetchData();
@@ -40,4 +42,4 @@ const MainPageBlock = () => {
   );
 };
 
-export default MainPageBlock;
+export default Page;

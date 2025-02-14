@@ -8,3 +8,8 @@ export interface IPageForm {
   content: string;
   page: string;
 }
+
+export interface IPageNav {
+  title: string;
+  id: string;
+}
